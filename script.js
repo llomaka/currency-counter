@@ -10,6 +10,7 @@ const noteFields = [
 const inputs = noteFields.map((field) => document.getElementById(field.id));
 const totalValueEl = document.getElementById("total-value");
 const totalNotesEl = document.getElementById("total-notes");
+const currentDateEl = document.getElementById("current-date");
 const form = document.getElementById("banknote-form");
 
 function formatCurrency(value) {
@@ -18,6 +19,18 @@ function formatCurrency(value) {
     currency: "UAH",
     maximumFractionDigits: 0
   }).format(value);
+}
+
+function updateDate() {
+  if (currentDateEl) {
+    const today = new Intl.DateTimeFormat("uk-UA", {
+      day: "numeric",
+      month: "long",
+      year: "numeric"
+    }).format(new Date());
+
+    currentDateEl.textContent = `Сьогодні: ${today}`;
+  }
 }
 
 function updateTotals() {
