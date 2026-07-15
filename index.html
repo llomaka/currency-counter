@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Рохрахунок суми</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Розрахунок суми</h1>
+      <p class="subtitle">
+        Введіть кількість купюр кожного номіналу для розрахунку загальної суми.
+      </p>
+
+      <form id="banknote-form">
+        <div class="grid">
+          <label class="field">
+            <span>1000</span>
+            <input type="number" id="note-1000" min="0" step="1" value="0" />
+          </label>
+
+          <label class="field">
+            <span>500</span>
+            <input type="number" id="note-500" min="0" step="1" value="0" />
+          </label>
+
+          <label class="field">
+            <span>200</span>
+            <input type="number" id="note-200" min="0" step="1" value="0" />
+          </label>
+
+          <label class="field">
+            <span>100</span>
+            <input type="number" id="note-100" min="0" step="1" value="0" />
+          </label>
+
+          <label class="field">
+            <span>50</span>
+            <input type="number" id="note-50" min="0" step="1" value="0" />
+          </label>
+
+          <label class="field">
+            <span>20</span>
+            <input type="number" id="note-20" min="0" step="1" value="0" />
+          </label>
+        </div>
+
+        <div class="summary">
+          <div>
+            <p>Загальна сума</p>
+            <strong id="total-value">0</strong>
+          </div>
+          <div>
+            <p>Загальна кількість купюр</p>
+            <strong id="total-notes">0</strong>
+          </div>
+        </div>
+
+        <button type="reset" id="reset-btn">Очистити</button>
+      </form>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
