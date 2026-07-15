@@ -36,6 +36,12 @@ h1 {
   color: #4b5563;
 }
 
+.date-display {
+  margin: 0 0 20px;
+  color: #2563eb;
+  font-weight: 600;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
