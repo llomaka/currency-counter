@@ -52,4 +52,5 @@ form.addEventListener("reset", () => {
   setTimeout(updateTotals, 0);
 });
 
+updateDate();
 updateTotals();
